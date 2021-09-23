@@ -23,11 +23,11 @@ class HostViewController: UIViewController {
     
     func form(){
         
-        let label = UILabel(frame: CGRect(x: 150, y: 170, width: 300, height: 40))
+        let label = UILabel(frame: CGRect(x: 120, y: 170, width: 300, height: 40))
         label.text = "Form"
         label.textColor = .brown
         label.numberOfLines = 0
-        label.font = UIFont(name:"Damascus", size: 20.0)
+        label.font = UIFont(name:"Georgia", size: 20.0)
         self.view.addSubview(label)
         
         let name =  UITextField(frame: CGRect(x: 20, y: 250, width: 300, height: 40))

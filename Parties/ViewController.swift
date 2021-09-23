@@ -88,12 +88,6 @@ class SecondViewController: UIViewController {
     }
 }
 
-//class ThirdViewController: UIViewController {
-//    override func viewDidLoad() {
-//        view.backgroundColor = .lightGray
-//        title = "My Account"
-//    }
-//}
 
 class FourthViewController: UIViewController {
     override func viewDidLoad() {
@@ -101,10 +95,4 @@ class FourthViewController: UIViewController {
         title = "Saved"
     }
 }
-
-//class FifthViewController: UIViewController {
-//    override func viewDidLoad() {
-//        view.backgroundColor = .lightGray
-//        title = "Host a Party"
-//    }
 
