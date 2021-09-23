@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         assignbackground()
         view.addSubview(button)
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        print("loaded")
     }
     
     func assignbackground(){
@@ -54,7 +55,7 @@ class ViewController: UIViewController {
         let vc2 = UINavigationController(rootViewController: SecondViewController())
         let vc3 = UINavigationController(rootViewController: AccountViewController())
         let vc4 = UINavigationController(rootViewController: FourthViewController())
-        let vc5 = UINavigationController(rootViewController: FifthViewController())
+        let vc5 = UINavigationController(rootViewController: HostViewController())
         
         vc1.title = "Parties"
         vc2.title = "My Tickets"
@@ -101,9 +102,9 @@ class FourthViewController: UIViewController {
     }
 }
 
-class FifthViewController: UIViewController {
-    override func viewDidLoad() {
-        view.backgroundColor = .lightGray
-        title = "Host a Party"
-    }
-}
+//class FifthViewController: UIViewController {
+//    override func viewDidLoad() {
+//        view.backgroundColor = .lightGray
+//        title = "Host a Party"
+//    }
+

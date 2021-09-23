@@ -18,6 +18,7 @@
 		8780B44E26FC1A7F00793FEA /* PartyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B44D26FC1A7F00793FEA /* PartyCell.swift */; };
 		8780B45126FC1D9700793FEA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B45026FC1D9700793FEA /* AccountViewController.swift */; };
 		8780B45926FCDA9800793FEA /* Parties.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8780B45826FCDA9800793FEA /* Parties.storyboard */; };
+		8780B45C26FD31C500793FEA /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B45B26FD31C500793FEA /* HostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8780B44D26FC1A7F00793FEA /* PartyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCell.swift; sourceTree = "<group>"; };
 		8780B45026FC1D9700793FEA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		8780B45826FCDA9800793FEA /* Parties.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parties.storyboard; sourceTree = "<group>"; };
+		8780B45B26FD31C500793FEA /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +73,9 @@
 				8780B43426FBE6F200793FEA /* ViewController.swift */,
 				8780B44A26FBF19C00793FEA /* Parties */,
 				8780B44F26FC1D6B00793FEA /* Account */,
-				8780B43926FBE6F300793FEA /* Assets.xcassets */,
+				8780B45A26FD319800793FEA /* Host */,
 				8780B43626FBE6F200793FEA /* Main.storyboard */,
+				8780B43926FBE6F300793FEA /* Assets.xcassets */,
 				8780B43B26FBE6F300793FEA /* LaunchScreen.storyboard */,
 				8780B43E26FBE6F300793FEA /* Info.plist */,
 			);
@@ -96,6 +99,14 @@
 				8780B45026FC1D9700793FEA /* AccountViewController.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		8780B45A26FD319800793FEA /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				8780B45B26FD31C500793FEA /* HostViewController.swift */,
+			);
+			path = Host;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8780B45C26FD31C500793FEA /* HostViewController.swift in Sources */,
 				8780B43526FBE6F200793FEA /* ViewController.swift in Sources */,
 				8780B44526FBE70D00793FEA /* PartiesViewController.swift in Sources */,
 				8780B45126FC1D9700793FEA /* AccountViewController.swift in Sources */,
