@@ -14,9 +14,10 @@ class ViewController: UIViewController {
         button.frame = CGRect(x: 135, y: 670, width: 150, height: 60)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setTitle("LOG IN", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        let image = UIImage(named: "button") as UIImage?
-        button.setImage(image, for: .normal)
+        button.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.5, alpha: 1)
+//        button.setTitleColor(.white, for: .normal)
+//        let image = UIImage(named: "button") as UIImage?
+//        button.setImage(image, for: .normal)
         
         return button
     }()

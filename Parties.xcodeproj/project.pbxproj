@@ -15,7 +15,6 @@
 		8780B43D26FBE6F300793FEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8780B43B26FBE6F300793FEA /* LaunchScreen.storyboard */; };
 		8780B44526FBE70D00793FEA /* PartiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B44426FBE70D00793FEA /* PartiesViewController.swift */; };
 		8780B44926FBE89A00793FEA /* PartiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B44826FBE89A00793FEA /* PartiesCollectionViewCell.swift */; };
-		8780B44E26FC1A7F00793FEA /* PartyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B44D26FC1A7F00793FEA /* PartyCell.swift */; };
 		8780B45126FC1D9700793FEA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B45026FC1D9700793FEA /* AccountViewController.swift */; };
 		8780B45926FCDA9800793FEA /* Parties.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8780B45826FCDA9800793FEA /* Parties.storyboard */; };
 		8780B45C26FD31C500793FEA /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B45B26FD31C500793FEA /* HostViewController.swift */; };
@@ -32,7 +31,6 @@
 		8780B43E26FBE6F300793FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8780B44426FBE70D00793FEA /* PartiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartiesViewController.swift; sourceTree = "<group>"; };
 		8780B44826FBE89A00793FEA /* PartiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartiesCollectionViewCell.swift; sourceTree = "<group>"; };
-		8780B44D26FC1A7F00793FEA /* PartyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCell.swift; sourceTree = "<group>"; };
 		8780B45026FC1D9700793FEA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		8780B45826FCDA9800793FEA /* Parties.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parties.storyboard; sourceTree = "<group>"; };
 		8780B45B26FD31C500793FEA /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
@@ -85,9 +83,8 @@
 		8780B44A26FBF19C00793FEA /* Parties */ = {
 			isa = PBXGroup;
 			children = (
-				8780B44826FBE89A00793FEA /* PartiesCollectionViewCell.swift */,
 				8780B44426FBE70D00793FEA /* PartiesViewController.swift */,
-				8780B44D26FC1A7F00793FEA /* PartyCell.swift */,
+				8780B44826FBE89A00793FEA /* PartiesCollectionViewCell.swift */,
 				8780B45826FCDA9800793FEA /* Parties.storyboard */,
 			);
 			path = Parties;
@@ -184,7 +181,6 @@
 				8780B43526FBE6F200793FEA /* ViewController.swift in Sources */,
 				8780B44526FBE70D00793FEA /* PartiesViewController.swift in Sources */,
 				8780B45126FC1D9700793FEA /* AccountViewController.swift in Sources */,
-				8780B44E26FC1A7F00793FEA /* PartyCell.swift in Sources */,
 				8780B44926FBE89A00793FEA /* PartiesCollectionViewCell.swift in Sources */,
 				8780B43126FBE6F200793FEA /* AppDelegate.swift in Sources */,
 				8780B43326FBE6F200793FEA /* SceneDelegate.swift in Sources */,

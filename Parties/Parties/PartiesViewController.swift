@@ -15,7 +15,7 @@ class PartiesViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Parties"
-
+            
         
     }
 
