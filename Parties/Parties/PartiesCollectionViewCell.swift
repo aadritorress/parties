@@ -16,14 +16,14 @@ class PartiesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var save: UIButton!
     
     
-    
-    func display() {
-        image.image = UIImage(named: "pool")
-        title.text = "title"
-        about.text = "about"
-        buy.setTitle("Buy Tickets", for: .normal)
-        save.setTitle("Save", for: .normal)
-    }
+//
+//    func display() {
+//        image.image = UIImage(named: "pool")
+//        title.text = "title"
+//        about.text = "about"
+//        buy.setTitle("Buy Tickets", for: .normal)
+//        save.setTitle("Save", for: .normal)
+//    }
 
     
     

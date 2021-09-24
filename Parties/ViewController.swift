@@ -9,16 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let button: UIButton = {
+    
+    private let signIn: UIButton = {
         let button = UIButton()
-        button.frame = CGRect(x: 135, y: 670, width: 150, height: 60)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.setTitle("LOG IN", for: .normal)
-        button.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.5, alpha: 1)
-//        button.setTitleColor(.white, for: .normal)
-//        let image = UIImage(named: "button") as UIImage?
-//        button.setImage(image, for: .normal)
-        
+        button.frame = CGRect(x: 110, y: 710, width: 180, height: 40)
+        button.layer.cornerRadius = 20
+        button.setTitle("Log In", for: .normal)
+        button.backgroundColor = UIColor(red: 0.1804, green: 0.3882, blue: 0.0118, alpha: 1.0)
+        return button
+    }()
+    
+    private let createAccount: UIButton = {
+        let button = UIButton()
+        button.frame = CGRect(x: 110, y: 760, width: 180, height: 40)
+        button.layer.cornerRadius = 20
+        button.setTitle("Create New Account", for: .normal)
+        button.backgroundColor = UIColor(red: 0.1804, green: 0.3882, blue: 0.0118, alpha: 1.0)
         return button
     }()
     
@@ -26,9 +32,37 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         assignbackground()
-        view.addSubview(button)
-        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        view.addSubview(signIn)
+        view.addSubview(createAccount)
+        signIn.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         print("loaded")
+        
+        
+        
+        let username =  UITextField(frame: CGRect(x: 100, y: 600, width: 200, height: 40))
+        username.placeholder = "username"
+        username.font = UIFont.systemFont(ofSize: 15)
+        username.borderStyle = UITextField.BorderStyle.roundedRect
+        username.autocorrectionType = UITextAutocorrectionType.no
+        username.keyboardType = UIKeyboardType.default
+        username.returnKeyType = UIReturnKeyType.done
+        username.clearButtonMode = UITextField.ViewMode.whileEditing
+        username.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+           self.view.addSubview(username)
+        
+        let password =  UITextField(frame: CGRect(x: 100, y: 650, width: 200, height: 40))
+        password.placeholder = "password"
+        password.font = UIFont.systemFont(ofSize: 15)
+        password.borderStyle = UITextField.BorderStyle.roundedRect
+        password.autocorrectionType = UITextAutocorrectionType.no
+        password.keyboardType = UIKeyboardType.default
+        password.returnKeyType = UIReturnKeyType.done
+        password.clearButtonMode = UITextField.ViewMode.whileEditing
+        password.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+        password.isSecureTextEntry = true
+           self.view.addSubview(password)
+        
+        
     }
     
     func assignbackground(){
@@ -43,10 +77,10 @@ class ViewController: UIViewController {
           view.addSubview(imageView)
       }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
 //        button.center = view.center
-    }
+//    }
     
     @objc func buttonPressed() {
         //create action
@@ -86,6 +120,16 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         view.backgroundColor = .lightGray
         title = "My Tickets"
+        
+        let background = UIImage(named: "backgroundVC")
+
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
     }
 }
 
@@ -94,6 +138,16 @@ class FourthViewController: UIViewController {
     override func viewDidLoad() {
         view.backgroundColor = .lightGray
         title = "Saved"
+        
+        let background = UIImage(named: "backgroundVC")
+
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
     }
 }
 

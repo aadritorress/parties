@@ -98,6 +98,12 @@ class HostViewController: UIViewController {
     
     @objc func formSent() {
         print("form sent")
+        
+        let alert = UIAlertController(title: "Thanks", message: "We will get back to you soon!", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        form()
     }
   
 }

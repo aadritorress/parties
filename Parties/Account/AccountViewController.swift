@@ -11,36 +11,49 @@ class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        assignbackground()
         
         view.backgroundColor = .white
         title = "My Account"
         
-        let image = UIImage(named: "gato")
+        let image = UIImage(named: "steph")
         let imageView = UIImageView(image: image!)
-        imageView.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        view.addSubview(imageView)
+        imageView.frame = CGRect(x: 130, y: 130, width: 150, height: 170)
+        imageView.layer.borderWidth = 3
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor(red: 0.1804, green: 0.3882, blue: 0.0118, alpha: 1.0).cgColor
+        imageView.layer.cornerRadius = imageView.frame.height/3
+        imageView.clipsToBounds = true
+        self.view.addSubview(imageView)
        
         
-        let name = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        name.center = CGPoint(x: 100, y: 285)
-        name.textAlignment = .center
-        name.text = "Adri Torres"
+        let name = UILabel(frame: CGRect(x: 10, y: 340, width: 200, height: 21))
+//        name.center = CGPoint(x: 100, y: 340)
+        name.textAlignment = .left
+        name.text = "Steph Hunter"
         self.view.addSubview(name)
         
-        let email = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        email.center = CGPoint(x: 130, y: 340)
-        email.textAlignment = .center
-        email.text = "adriana@msn.com"
+        let labelPronouns = UILabel(frame: CGRect(x: 10, y: 395, width: 200, height: 21))
+//        labelPronouns.center = CGPoint(x: 100, y: 445)
+        labelPronouns.textAlignment = .left
+        labelPronouns.text = "She/Her"
+        self.view.addSubview(labelPronouns)
+        
+        
+        let email = UILabel(frame: CGRect(x: 10, y: 445, width: 200, height: 21))
+//        email.center = CGPoint(x: 100, y: 395)
+        email.textAlignment = .left
+        email.text = "ste@gmail.com"
         self.view.addSubview(email)
         
-//        let labelPronouns = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-//        labelPronouns.center = CGPoint(x: 100, y: 395)
-//        labelPronouns.textAlignment = .center
-//        labelPronouns.text = "She/Her"
-//        self.view.addSubview(labelPronouns)
+        let location = UILabel(frame: CGRect(x: 10, y: 495, width: 200, height: 21))
+//        location.center = CGPoint(x: 10, y: 495)
+        location.textAlignment = .left
+        location.text = "Lives in Philadelphia, PA"
+        self.view.addSubview(location)
         
-        let cardsPayments = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        cardsPayments.center = CGPoint(x: 200, y: 550)
+        let cardsPayments = UIButton(frame: CGRect(x: 10, y: 0, width: 200, height: 21))
+        cardsPayments.center = CGPoint(x: 200, y: 600)
         cardsPayments.setTitle("Cards & Payments", for: .normal)
         cardsPayments.setTitleColor(.systemBlue, for: .normal)
         cardsPayments.addTarget(self, action: #selector(pressed), for: .touchUpInside)
@@ -54,6 +67,19 @@ class AccountViewController: UIViewController {
         self.navigationController?.pushViewController(newViewController, animated: true)
         
     }
+    
+    func assignbackground(){
+          let background = UIImage(named: "backgroundVC")
+
+          var imageView : UIImageView!
+          imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+          imageView.clipsToBounds = true
+          imageView.image = background
+          imageView.center = view.center
+          view.addSubview(imageView)
+      }
+
 
     
     class PaymentViewController: UIViewController {
@@ -68,6 +94,17 @@ class AccountViewController: UIViewController {
             card.textAlignment = .center
             card.text = "Add your cards here"
             self.view.addSubview(card)
+            
+            let background = UIImage(named: "backgroundVC")
+
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+         
         }
     }
     

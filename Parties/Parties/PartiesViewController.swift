@@ -7,31 +7,52 @@
 
 import UIKit
 
-class PartiesViewController: UIViewController {
+class PartiesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    var myCollectionView:UICollectionView?
+
+    let titles = ["Boat Party", "Camping Party", "House Party", "Pool Party"]
+    let image = [UIImage(named: "boat"), UIImage(named: "camping"), UIImage(named: "house"), UIImage(named: "pool")]
+    let about = ["description", "description", "description", "description"]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Parties"
-            
-        
+        assignbackground()
     }
+
+    
+    func assignbackground(){
+          let background = UIImage(named: "backgroundVC")
+
+          var imageView : UIImageView!
+          imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+          imageView.clipsToBounds = true
+          imageView.image = background
+          imageView.center = view.center
+          view.addSubview(imageView)
+      }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return titles.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PartiesCollectionViewCell
+        
+        cell.title.text = titles[indexPath.row]
+        cell.image.image = image[indexPath.row]
+        cell.about.text = about[indexPath.row]
+        
+        
+        return cell
+    }
+    
 
 }
 
-
-
-
-//
-//let view = UIView()
-//view.backgroundColor = .white
-//
-//let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-//layout.itemSize = CGSize(width: 60, height: 60)
-//
-//
-//
-//self.view = view
