@@ -16,6 +16,12 @@ class HostViewController: UIViewController {
         
         assignbackground()
         form()
+        
+        let datePicker: UIDatePicker = UIDatePicker()
+        datePicker.frame = CGRect(x: 25, y: 530, width: 350, height: 40)
+        datePicker.timeZone = NSTimeZone.local
+        datePicker.preferredDatePickerStyle = .wheels
+        self.view.addSubview(datePicker)
     }
     
     
@@ -101,13 +107,14 @@ class HostViewController: UIViewController {
         self.view.addSubview(dateLabel)
         
 
-        let datePicker: UIDatePicker = UIDatePicker()
-        datePicker.frame = CGRect(x: 25, y: 530, width: 300, height: 40)
-        datePicker.timeZone = NSTimeZone.local
-        self.view.addSubview(datePicker)
+//        let datePicker: UIDatePicker = UIDatePicker()
+//        datePicker.frame = CGRect(x: 25, y: 530, width: 350, height: 40)
+//        datePicker.timeZone = NSTimeZone.local
+//        datePicker.preferredDatePickerStyle = .wheels
+//        self.view.addSubview(datePicker)
         
         
-        let button = UIButton(frame: CGRect(x: 25, y: 585, width: 300, height: 40))
+        let button = UIButton(frame: CGRect(x: 25, y: 750, width: 300, height: 40))
         button.setTitle("Submit", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         self.view.addSubview(button)
@@ -135,6 +142,7 @@ class HostViewController: UIViewController {
         
         form()
     }
+
   
 }
 
