@@ -23,14 +23,14 @@ class HostViewController: UIViewController {
     
     func form(){
         
-        let label = UILabel(frame: CGRect(x: 120, y: 170, width: 300, height: 40))
-        label.text = "Form"
+        let label = UILabel(frame: CGRect(x: 90, y: 170, width: 300, height: 40))
+        label.text = "Apply to host a L Party!"
         label.textColor = .brown
         label.numberOfLines = 0
         label.font = UIFont(name:"Georgia", size: 20.0)
         self.view.addSubview(label)
         
-        let name =  UITextField(frame: CGRect(x: 20, y: 250, width: 300, height: 40))
+        let name =  UITextField(frame: CGRect(x: 25, y: 235, width: 300, height: 40))
         name.placeholder = "Full Name"
         name.font = UIFont.systemFont(ofSize: 15)
         name.borderStyle = UITextField.BorderStyle.roundedRect
@@ -41,7 +41,35 @@ class HostViewController: UIViewController {
         name.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
            self.view.addSubview(name)
         
-        let address =  UITextField(frame: CGRect(x: 20, y: 300, width: 300, height: 40))
+        let email =  UITextField(frame: CGRect(x: 25, y: 290, width: 300, height: 40))
+        email.placeholder = "Email"
+        email.font = UIFont.systemFont(ofSize: 15)
+        email.borderStyle = UITextField.BorderStyle.roundedRect
+        email.autocorrectionType = UITextAutocorrectionType.no
+        email.keyboardType = UIKeyboardType.default
+        email.returnKeyType = UIReturnKeyType.done
+        email.clearButtonMode = UITextField.ViewMode.whileEditing
+        email.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+           self.view.addSubview(email)
+        
+        
+        let phoneNumber =  UITextField(frame: CGRect(x: 25, y: 345, width: 300, height: 40))
+        phoneNumber.placeholder = "Phone Number"
+        phoneNumber.font = UIFont.systemFont(ofSize: 15)
+        phoneNumber.borderStyle = UITextField.BorderStyle.roundedRect
+        phoneNumber.autocorrectionType = UITextAutocorrectionType.no
+        phoneNumber.keyboardType = UIKeyboardType.default
+        phoneNumber.returnKeyType = UIReturnKeyType.done
+        phoneNumber.clearButtonMode = UITextField.ViewMode.whileEditing
+        phoneNumber.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+           self.view.addSubview(phoneNumber)
+        
+        //venue type *select - residential // comercial
+        //disabled access *select - yes // no
+        //indoor/outdoor *select indoor/outdoor
+        
+        
+        let address =  UITextField(frame: CGRect(x: 25, y: 400, width: 300, height: 40))
         address.placeholder = "Address"
         address.font = UIFont.systemFont(ofSize: 15)
         address.borderStyle = UITextField.BorderStyle.roundedRect
@@ -53,20 +81,7 @@ class HostViewController: UIViewController {
            self.view.addSubview(address)
         
         
-        let date =  UITextField(frame: CGRect(x: 20, y: 350, width: 300, height: 40))
-        date.placeholder = "Date"
-        //add UIDatePicker
-        date.font = UIFont.systemFont(ofSize: 15)
-        date.borderStyle = UITextField.BorderStyle.roundedRect
-        date.autocorrectionType = UITextAutocorrectionType.no
-        date.keyboardType = UIKeyboardType.default
-        date.returnKeyType = UIReturnKeyType.done
-        date.clearButtonMode = UITextField.ViewMode.whileEditing
-        date.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
-           self.view.addSubview(date)
-        
-        
-        let guestcapacity =  UITextField(frame: CGRect(x: 20, y: 400, width: 300, height: 40))
+        let guestcapacity =  UITextField(frame: CGRect(x: 25, y: 455, width: 300, height: 40))
         guestcapacity.placeholder = "Guest Capacity"
         guestcapacity.font = UIFont.systemFont(ofSize: 15)
         guestcapacity.borderStyle = UITextField.BorderStyle.roundedRect
@@ -77,8 +92,23 @@ class HostViewController: UIViewController {
         guestcapacity.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
            self.view.addSubview(guestcapacity)
         
-        let button = UIButton(frame: CGRect(x: 0, y: 450, width: 300, height: 40))
-        button.setTitle("Send", for: .normal)
+        
+        let dateLabel = UILabel(frame: CGRect(x: 25, y: 500, width: 300, height: 40))
+        dateLabel.text = "Date"
+        dateLabel.textColor = .brown
+        dateLabel.numberOfLines = 0
+        dateLabel.font = UIFont(name:"Georgia", size: 15.0)
+        self.view.addSubview(dateLabel)
+        
+
+        let datePicker: UIDatePicker = UIDatePicker()
+        datePicker.frame = CGRect(x: 25, y: 530, width: 300, height: 40)
+        datePicker.timeZone = NSTimeZone.local
+        self.view.addSubview(datePicker)
+        
+        
+        let button = UIButton(frame: CGRect(x: 25, y: 585, width: 300, height: 40))
+        button.setTitle("Submit", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         self.view.addSubview(button)
         button.addTarget(self, action: #selector(formSent), for: .touchUpInside)

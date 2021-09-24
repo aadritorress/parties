@@ -38,6 +38,14 @@ class ViewController: UIViewController {
         print("loaded")
         
         
+        let label = UILabel(frame: CGRect(x: 90, y: 170, width: 300, height: 60))
+        label.text = "The L App"
+        label.textColor = UIColor(red: 0.1804, green: 0.3882, blue: 0.0118, alpha: 1.0)
+        label.numberOfLines = 0
+        label.font = UIFont(name:"Avenir Medium", size: 50.0)
+        self.view.addSubview(label)
+        
+        
         
         let username =  UITextField(frame: CGRect(x: 100, y: 600, width: 200, height: 40))
         username.placeholder = "username"
