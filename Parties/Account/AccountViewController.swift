@@ -25,29 +25,32 @@ class AccountViewController: UIViewController {
         imageView.layer.cornerRadius = imageView.frame.height/3
         imageView.clipsToBounds = true
         self.view.addSubview(imageView)
+        
+        let editProfile = UIButton(frame: CGRect(x: 150, y: 310, width: 100, height: 15))
+        editProfile.setTitle("Edit Profile", for: .normal)
+        editProfile.setTitleColor(.systemBlue, for: .normal)
+        editProfile.titleLabel?.font = .systemFont(ofSize: 15)
+        view.addSubview(editProfile)
+        //add action to edit 
        
         
         let name = UILabel(frame: CGRect(x: 10, y: 340, width: 200, height: 21))
-//        name.center = CGPoint(x: 100, y: 340)
         name.textAlignment = .left
         name.text = "Steph Hunter"
         self.view.addSubview(name)
         
         let labelPronouns = UILabel(frame: CGRect(x: 10, y: 395, width: 200, height: 21))
-//        labelPronouns.center = CGPoint(x: 100, y: 445)
         labelPronouns.textAlignment = .left
         labelPronouns.text = "She/Her"
         self.view.addSubview(labelPronouns)
         
         
         let email = UILabel(frame: CGRect(x: 10, y: 445, width: 200, height: 21))
-//        email.center = CGPoint(x: 100, y: 395)
         email.textAlignment = .left
         email.text = "ste@gmail.com"
         self.view.addSubview(email)
         
         let location = UILabel(frame: CGRect(x: 10, y: 495, width: 200, height: 21))
-//        location.center = CGPoint(x: 10, y: 495)
         location.textAlignment = .left
         location.text = "Lives in Philadelphia, PA"
         self.view.addSubview(location)
