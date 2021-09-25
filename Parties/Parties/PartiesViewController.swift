@@ -11,10 +11,10 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
 
 
     let titles = ["Boat Party", "Camping Party", "House Party", "Pool Party"]
+    
     let image = [UIImage(named: "boat"), UIImage(named: "camping"), UIImage(named: "house"), UIImage(named: "pool")]
+    
     let about = ["description", "description", "description", "description"]
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
