@@ -10,6 +10,9 @@ import UIKit
 class PartiesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     let titles = ["Boat Party", "Camping Party", "House Party", "Pool Party"]
     
     let image = [UIImage(named: "boat"), UIImage(named: "camping"), UIImage(named: "house"), UIImage(named: "pool")]
@@ -33,7 +36,9 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
           imageView.clipsToBounds = true
           imageView.image = background
           imageView.center = view.center
-          view.addSubview(imageView)
+        imageView.layer.zPosition = -1
+        
+          collectionView.addSubview(imageView)
       }
     
     

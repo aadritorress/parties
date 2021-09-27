@@ -94,7 +94,10 @@ class ViewController: UIViewController {
         //create action
         let tabBarViewController = UITabBarController()
         
-        let vc1 = UINavigationController(rootViewController: PartiesViewController())
+        let partyStoryboard = UIStoryboard(name: "Parties", bundle: nil)
+        let partyViewController = partyStoryboard.instantiateViewController(identifier: "PartiesViewController")
+        
+        let vc1 = UINavigationController(rootViewController: partyViewController)
         let vc2 = UINavigationController(rootViewController: SecondViewController())
         let vc3 = UINavigationController(rootViewController: AccountViewController())
         let vc4 = UINavigationController(rootViewController: FourthViewController())
