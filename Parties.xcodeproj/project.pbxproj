@@ -18,6 +18,9 @@
 		8780B45126FC1D9700793FEA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B45026FC1D9700793FEA /* AccountViewController.swift */; };
 		8780B45926FCDA9800793FEA /* Parties.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8780B45826FCDA9800793FEA /* Parties.storyboard */; };
 		8780B45C26FD31C500793FEA /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B45B26FD31C500793FEA /* HostViewController.swift */; };
+		879839D5270364800034211F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879839D4270364800034211F /* DetailViewController.swift */; };
+		879839D8270373680034211F /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879839D7270373680034211F /* TicketsViewController.swift */; };
+		879839DB27037FFA0034211F /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879839DA27037FFA0034211F /* SavedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		8780B45026FC1D9700793FEA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		8780B45826FCDA9800793FEA /* Parties.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parties.storyboard; sourceTree = "<group>"; };
 		8780B45B26FD31C500793FEA /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
+		879839D4270364800034211F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		879839D7270373680034211F /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		879839DA27037FFA0034211F /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,8 @@
 				8780B44A26FBF19C00793FEA /* Parties */,
 				8780B44F26FC1D6B00793FEA /* Account */,
 				8780B45A26FD319800793FEA /* Host */,
+				879839D62703732D0034211F /* Tickets */,
+				879839D927037FDF0034211F /* Saved */,
 				8780B43626FBE6F200793FEA /* Main.storyboard */,
 				8780B43926FBE6F300793FEA /* Assets.xcassets */,
 				8780B43B26FBE6F300793FEA /* LaunchScreen.storyboard */,
@@ -84,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				8780B44426FBE70D00793FEA /* PartiesViewController.swift */,
+				879839D4270364800034211F /* DetailViewController.swift */,
 				8780B44826FBE89A00793FEA /* PartiesCollectionViewCell.swift */,
 				8780B45826FCDA9800793FEA /* Parties.storyboard */,
 			);
@@ -104,6 +113,22 @@
 				8780B45B26FD31C500793FEA /* HostViewController.swift */,
 			);
 			path = Host;
+			sourceTree = "<group>";
+		};
+		879839D62703732D0034211F /* Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				879839D7270373680034211F /* TicketsViewController.swift */,
+			);
+			path = Tickets;
+			sourceTree = "<group>";
+		};
+		879839D927037FDF0034211F /* Saved */ = {
+			isa = PBXGroup;
+			children = (
+				879839DA27037FFA0034211F /* SavedViewController.swift */,
+			);
+			path = Saved;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,12 +203,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8780B45C26FD31C500793FEA /* HostViewController.swift in Sources */,
+				879839D8270373680034211F /* TicketsViewController.swift in Sources */,
 				8780B43526FBE6F200793FEA /* ViewController.swift in Sources */,
 				8780B44526FBE70D00793FEA /* PartiesViewController.swift in Sources */,
 				8780B45126FC1D9700793FEA /* AccountViewController.swift in Sources */,
 				8780B44926FBE89A00793FEA /* PartiesCollectionViewCell.swift in Sources */,
 				8780B43126FBE6F200793FEA /* AppDelegate.swift in Sources */,
 				8780B43326FBE6F200793FEA /* SceneDelegate.swift in Sources */,
+				879839DB27037FFA0034211F /* SavedViewController.swift in Sources */,
+				879839D5270364800034211F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

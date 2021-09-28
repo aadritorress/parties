@@ -13,14 +13,16 @@ class HostViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
         title = "Host a Party"
+        view.backgroundColor =  UIColor(red: 0.9804, green: 0.9882, blue: 0.8902, alpha: 1.0)
         
-        assignbackground()
+//        assignbackground()
         form()
         
         let datePicker: UIDatePicker = UIDatePicker()
         datePicker.frame = CGRect(x: 25, y: 530, width: 350, height: 40)
         datePicker.timeZone = NSTimeZone.local
         datePicker.preferredDatePickerStyle = .wheels
+        //size
         self.view.addSubview(datePicker)
     }
     
@@ -121,17 +123,17 @@ class HostViewController: UIViewController {
         button.addTarget(self, action: #selector(formSent), for: .touchUpInside)
     }
     
-    func assignbackground(){
-          let background = UIImage(named: "backgroundVC")
-
-          var imageView : UIImageView!
-          imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-          imageView.clipsToBounds = true
-          imageView.image = background
-          imageView.center = view.center
-          view.addSubview(imageView)
-      }
+//    func assignbackground(){
+//          let background = UIImage(named: "backgroundVC")
+//
+//          var imageView : UIImageView!
+//          imageView = UIImageView(frame: view.bounds)
+//        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+//          imageView.clipsToBounds = true
+//          imageView.image = background
+//          imageView.center = view.center
+//          view.addSubview(imageView)
+//      }
     
     @objc func formSent() {
         print("form sent")

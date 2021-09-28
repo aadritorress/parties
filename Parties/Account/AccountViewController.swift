@@ -11,9 +11,9 @@ class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        assignbackground()
+//        assignbackground()
         
-        view.backgroundColor = .white
+        view.backgroundColor =  UIColor(red: 0.9804, green: 0.9882, blue: 0.8902, alpha: 1.0)
         title = "My Account"
         
         let image = UIImage(named: "steph")
@@ -71,17 +71,17 @@ class AccountViewController: UIViewController {
         
     }
     
-    func assignbackground(){
-          let background = UIImage(named: "backgroundVC")
-
-          var imageView : UIImageView!
-          imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-          imageView.clipsToBounds = true
-          imageView.image = background
-          imageView.center = view.center
-          view.addSubview(imageView)
-      }
+//    func assignbackground(){
+//          let background = UIImage(named: "backgroundVC")
+//
+//          var imageView : UIImageView!
+//          imageView = UIImageView(frame: view.bounds)
+//        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+//          imageView.clipsToBounds = true
+//          imageView.image = background
+//          imageView.center = view.center
+//          view.addSubview(imageView)
+//      }
 
 
     

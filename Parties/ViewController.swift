@@ -98,9 +98,9 @@ class ViewController: UIViewController {
         let partyViewController = partyStoryboard.instantiateViewController(identifier: "PartiesViewController")
         
         let vc1 = UINavigationController(rootViewController: partyViewController)
-        let vc2 = UINavigationController(rootViewController: SecondViewController())
+        let vc2 = UINavigationController(rootViewController: TicketsViewController())
         let vc3 = UINavigationController(rootViewController: AccountViewController())
-        let vc4 = UINavigationController(rootViewController: FourthViewController())
+        let vc4 = UINavigationController(rootViewController: SavedViewController())
         let vc5 = UINavigationController(rootViewController: HostViewController())
         
         vc1.title = "Parties"
@@ -127,38 +127,5 @@ class ViewController: UIViewController {
     }
 }
 
-class SecondViewController: UIViewController {
-    override func viewDidLoad() {
-        view.backgroundColor = .lightGray
-        title = "My Tickets"
-        
-        let background = UIImage(named: "backgroundVC")
 
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background
-        imageView.center = view.center
-        view.addSubview(imageView)
-    }
-}
-
-
-class FourthViewController: UIViewController {
-    override func viewDidLoad() {
-        view.backgroundColor = .lightGray
-        title = "Saved"
-        
-        let background = UIImage(named: "backgroundVC")
-
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background
-        imageView.center = view.center
-        view.addSubview(imageView)
-    }
-}
 
