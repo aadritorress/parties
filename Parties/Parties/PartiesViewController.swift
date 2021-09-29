@@ -65,8 +65,8 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         self.present(alert, animated: true, completion: nil)
         
         //add to array saved and display on saved controller
-//        saved.append()
-//        print("saving:\(saved)")
+        saved.append(title!)
+        print("saving from partiesVC:\(saved)")
         passDataToSavedVC()
     }
     

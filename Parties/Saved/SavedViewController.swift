@@ -15,8 +15,11 @@ class SavedViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor =  UIColor(red: 0.9804, green: 0.9882, blue: 0.8902, alpha: 1.0)
         title = "Saved"
-        
-        print("from saved controller: saved - \(saved)")
+//        print("from saved controller: saved - \(saved.count)")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("from saved controller: saved - \(saved.count)")
     }
     
 }

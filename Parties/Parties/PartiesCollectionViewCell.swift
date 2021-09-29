@@ -30,7 +30,7 @@ class PartiesCollectionViewCell: UICollectionViewCell {
         for vc in allViewControllers {
             if let vc = vc as? UINavigationController, let savedVC = vc.viewControllers.first as? SavedViewController {
                 savedVC.saved = self.saved
-    }
+            }
         }
     }
 
