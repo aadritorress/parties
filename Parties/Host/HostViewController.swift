@@ -26,8 +26,6 @@ class HostViewController: UIViewController {
     }
     
     
-    
-    
     func form(){
         
         let label = UILabel(frame: CGRect(x: 90, y: 170, width: 300, height: 40))
@@ -97,6 +95,7 @@ class HostViewController: UIViewController {
         guestcapacity.keyboardType = UIKeyboardType.default
         guestcapacity.returnKeyType = UIReturnKeyType.done
         guestcapacity.clearButtonMode = UITextField.ViewMode.whileEditing
+        
         guestcapacity.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
            self.view.addSubview(guestcapacity)
         
