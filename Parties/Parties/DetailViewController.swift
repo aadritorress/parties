@@ -12,9 +12,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var details: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var location: UILabel!
     
     var party = ""
-    var about = ""
+    var longDescription = ""
+    var cost = ""
+    var area = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +27,10 @@ class DetailViewController: UIViewController {
         
         label.text = party
         image.image = UIImage(named: party)
-        details.text = about
-
+        details.text = longDescription
+        price.text = cost
+        location.text = area
+        
     }
     
 

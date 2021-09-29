@@ -9,6 +9,12 @@ import UIKit
 
 class PartiesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    let titles = ["Boat Party", "Camping Party", "House Party", "Pool Party"]
+    let image = [UIImage(named: "Boat Party"), UIImage(named: "Camping Party"), UIImage(named: "House Party"), UIImage(named: "Pool Party")]
+    let shortDescription = ["something about the party", "something about the party", "something about the party", "something about the party"]
+    let price = ["price", "price", "price", "price"]
+    let longDescription = ["more about the party here", "more about the party here", "more about the party here", "more about the party here"]
+    let location = ["location", "location", "location", "location"]
     
     var purchases = [String]()
     var saved = [String]()
@@ -41,43 +47,46 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
     
     @objc func purchase() {
         print("buying ticket")
-        //add party to controller (tickets) and display info
+        let alert = UIAlertController(title: "Order confirmed", message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        //add party to an array and display info in ticket controller
+        //array purchases
+        
+        
         
     }
     
+    
     @IBAction func saveAction(_ sender: Any) {
         print("saving event")
+        
+        let alert = UIAlertController(title: "Saved!", message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        //add to array saved and display on saved controller
+        
+        
+        
     }
     
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    
-    let titles = ["Boat Party", "Camping Party", "House Party", "Pool Party"]
-    
-    let image = [UIImage(named: "Boat Party"), UIImage(named: "Camping Party"), UIImage(named: "House Party"), UIImage(named: "Pool Party")]
-    
-    let about = ["description", "description", "description", "description"]
+    @IBOutlet weak var collectionView: UICollectionView!    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor =  UIColor(red: 0.9804, green: 0.9882, blue: 0.8902, alpha: 1.0)
         title = "Parties"
-    }
-
-    
-//    func assignbackground(){
-//          let background = UIImage(named: "backgroundVC")
+        
+//        card.layer.cornerRadius = 10
+//        card.layer.shadowColor = UIColor.gray.cgColor
+//        card.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+//        card.layer.shadowRadius = 4.0
+//        card.layer.shadowOpacity = 0.5
 //
-//          var imageView : UIImageView!
-//          imageView = UIImageView(frame: view.bounds)
-//        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-//          imageView.clipsToBounds = true
-//          imageView.image = background
-//          imageView.center = view.center
-//        imageView.layer.zPosition = -1
-//          collectionView.addSubview(imageView)
-//      }
+    }
     
     
     
@@ -90,8 +99,7 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         
         cell.title.text = titles[indexPath.row]
         cell.image.image = image[indexPath.row]
-        cell.about.text = about[indexPath.row]
-        
+        cell.about.text = shortDescription[indexPath.row]
         
         return cell
     }
@@ -100,10 +108,13 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         let details = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController
         
         details?.party = titles[indexPath.row]
-        details?.about =  about[indexPath.row]
-        self.navigationController?.pushViewController(details!, animated: true)
+        details?.longDescription =  longDescription[indexPath.row]
+        details?.cost = price[indexPath.row]
+        details?.area = location[indexPath.row]
         
+        self.navigationController?.pushViewController(details!, animated: true)
     }
+    
     
 
 }

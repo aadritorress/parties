@@ -76,7 +76,7 @@ class AccountViewController: UIViewController {
     class PaymentViewController: UIViewController {
         override func viewDidLoad() {
             view.backgroundColor =  UIColor(red: 0.9804, green: 0.9882, blue: 0.8902, alpha: 1.0)
-            title = "Manage Payment / Add new Card"
+            title = "Manage Payment"
             
             //Manage Payment
             let payment = UILabel(frame: CGRect(x: 100, y: 200, width: 200, height: 21))
@@ -195,7 +195,7 @@ class AccountViewController: UIViewController {
             button.setTitleColor(.systemBlue, for: .normal)
             self.view.addSubview(button)
            
-            //city, state, zipcode
+           
             
             
             

@@ -8,18 +8,17 @@
 import UIKit
 
 class HostViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
         title = "Host a Party"
         view.backgroundColor =  UIColor(red: 0.9804, green: 0.9882, blue: 0.8902, alpha: 1.0)
         
-//        assignbackground()
         form()
         
         let datePicker: UIDatePicker = UIDatePicker()
-        datePicker.frame = CGRect(x: 25, y: 530, width: 350, height: 40)
+        datePicker.frame = CGRect(x: 25, y: 530, width: self.view.frame.width/2, height: 40)
         datePicker.timeZone = NSTimeZone.local
         datePicker.preferredDatePickerStyle = .wheels
         //size
@@ -75,6 +74,7 @@ class HostViewController: UIViewController {
         //venue type *select - residential // comercial
         //disabled access *select - yes // no
         //indoor/outdoor *select indoor/outdoor
+        //male allowed
         
         
         let address =  UITextField(frame: CGRect(x: 25, y: 400, width: 300, height: 40))
@@ -101,19 +101,13 @@ class HostViewController: UIViewController {
            self.view.addSubview(guestcapacity)
         
         
+        
         let dateLabel = UILabel(frame: CGRect(x: 25, y: 500, width: 300, height: 40))
         dateLabel.text = "Date"
         dateLabel.textColor = .brown
         dateLabel.numberOfLines = 0
         dateLabel.font = UIFont(name:"Georgia", size: 15.0)
         self.view.addSubview(dateLabel)
-        
-
-//        let datePicker: UIDatePicker = UIDatePicker()
-//        datePicker.frame = CGRect(x: 25, y: 530, width: 350, height: 40)
-//        datePicker.timeZone = NSTimeZone.local
-//        datePicker.preferredDatePickerStyle = .wheels
-//        self.view.addSubview(datePicker)
         
         
         let button = UIButton(frame: CGRect(x: 25, y: 750, width: 300, height: 40))
@@ -123,17 +117,6 @@ class HostViewController: UIViewController {
         button.addTarget(self, action: #selector(formSent), for: .touchUpInside)
     }
     
-//    func assignbackground(){
-//          let background = UIImage(named: "backgroundVC")
-//
-//          var imageView : UIImageView!
-//          imageView = UIImageView(frame: view.bounds)
-//        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-//          imageView.clipsToBounds = true
-//          imageView.image = background
-//          imageView.center = view.center
-//          view.addSubview(imageView)
-//      }
     
     @objc func formSent() {
         print("form sent")
@@ -143,6 +126,7 @@ class HostViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
         form()
+        //clear, better way?
     }
 
   
