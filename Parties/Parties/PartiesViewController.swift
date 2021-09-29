@@ -11,6 +11,9 @@ struct PartyModel {
     let title: String
     let image: UIImage
     let shortDescription: String
+    let price: String
+    let longDescription: String
+    let location: String
 }
 
 class PartiesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -26,9 +29,8 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func createParties() {
         for num in 0..<titles.count {
-            let party = PartyModel(title: titles[num], image: image[num]!, shortDescription: shortDescription[num])
+            let party = PartyModel(title: titles[num], image: image[num]!, shortDescription: shortDescription[num], price: price[num], longDescription: longDescription[num], location: location[num])
             parties.append(party)
-//            print("parties:\(parties)")
         }
     }
     
@@ -65,7 +67,7 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         self.present(alert, animated: true, completion: nil)
         
         //add to array saved and display on saved controller
-        saved.append(title!)
+//        saved.append(parties.title)
         print("saving from partiesVC:\(saved)")
         passDataToSavedVC()
     }
@@ -90,6 +92,7 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         title = "Parties"
         
         createParties()
+//        print(parties)
     }
     
     

@@ -56,8 +56,6 @@ class DetailViewController: UIViewController {
         
         
         ticketsPurchased.text = "You have \(String(describing: ticketsQ.text!)) tickets to this party"
-//        ticketsQ.text = "1"
-        
         
         //add party to an array and display info in ticket controller
         //array purchases
@@ -89,7 +87,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 //        print(party)
         
-//        label.text = party
         label.text = party
         image.image = UIImage(named: party)
         details.text = longDescription

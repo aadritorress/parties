@@ -19,7 +19,7 @@ class SavedViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("from saved controller: saved - \(saved.count)")
+        print("from saved controller: saved - \(saved)")
     }
     
 }
