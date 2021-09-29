@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         view.addSubview(signIn)
         view.addSubview(createAccount)
         signIn.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        print("loaded")
+//        print("loaded")
         
         
         let label = UILabel(frame: CGRect(x: 90, y: 170, width: 300, height: 60))

@@ -17,9 +17,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var ticketsQ: UILabel!
     @IBOutlet weak var ticketsPurchased: UILabel!
     
-    
+    var purchases = [String]()
+
     @IBAction func stepper(_ sender: UIStepper) {
-        ticketsQ.text = String(sender.value)
+        ticketsQ.text = String(Int(sender.value))
     }
     
     
@@ -54,16 +55,29 @@ class DetailViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
         
-        ticketsPurchased.text = "You have \(String(describing: ticketsQ.text!)) tickets to this show"
-        ticketsQ.text = "1"
+        ticketsPurchased.text = "You have \(String(describing: ticketsQ.text!)) tickets to this party"
+//        ticketsQ.text = "1"
+        
         
         //add party to an array and display info in ticket controller
         //array purchases
-        
     
+        purchases.append(label.text ?? "")
+        purchases.append(ticketsQ.text ?? "")
+        print(purchases)
+        passDataToTicketVC()
+        ticketsQ.text = "1"
     }
     
-    
+    func passDataToTicketVC() {
+        
+        let allViewControllers = tabBarController?.viewControllers ?? []
+        for vc in allViewControllers {
+            if let vc = vc as? UINavigationController, let ticketVC = vc.viewControllers.first as? TicketsViewController {
+                ticketVC.purchases = self.purchases
+            }
+        }
+    }
     
     var party = ""
     var longDescription = ""
@@ -75,6 +89,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 //        print(party)
         
+//        label.text = party
         label.text = party
         image.image = UIImage(named: party)
         details.text = longDescription

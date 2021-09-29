@@ -16,16 +16,24 @@ class PartiesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var save: UIButton!
     @IBOutlet weak var card: UIView!
     
+    var saved = [String]()
+    
+    let tabBarController: UITabBarController? = nil
+    
     @IBAction func heart(_ sender: Any) {
         self.save.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+//        print("party:\(title.text!)")
+        saved.append(title.text!)
+        print("from parties cell - saved:\(saved)")
+    
+        let allViewControllers = tabBarController?.viewControllers ?? []
+        for vc in allViewControllers {
+            if let vc = vc as? UINavigationController, let savedVC = vc.viewControllers.first as? SavedViewController {
+                savedVC.saved = self.saved
     }
-    
-    @IBAction func purchase(_ sender: Any) {
-//        self.buy.setTitle("You have \() tickets to this show", for: .normal)
+        }
     }
-    
-    
-    
+
     func cardView() {
         card.layer.cornerRadius = 10
         card.layer.shadowColor = UIColor.gray.cgColor
@@ -35,4 +43,3 @@ class PartiesCollectionViewCell: UICollectionViewCell {
     }
     
 }
-

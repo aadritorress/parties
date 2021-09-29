@@ -7,6 +7,12 @@
 
 import UIKit
 
+struct PartyModel {
+    let title: String
+    let image: UIImage
+    let shortDescription: String
+}
+
 class PartiesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     let titles = ["Boat Party", "Camping Party", "House Party", "Pool Party"]
@@ -15,10 +21,16 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
     let price = ["price", "price", "price", "price"]
     let longDescription = ["more about the party here", "more about the party here", "more about the party here", "more about the party here"]
     let location = ["location", "location", "location", "location"]
+
+    var parties: [PartyModel] = []
     
-    var purchases = [String]()
-    var saved = [String]()
-    
+    func createParties() {
+        for num in 0..<titles.count {
+            let party = PartyModel(title: titles[num], image: image[num]!, shortDescription: shortDescription[num])
+            parties.append(party)
+//            print("parties:\(parties)")
+        }
+    }
     
     @IBAction func buyAction(_ sender: Any) {
         // Create the alert controller
@@ -29,7 +41,6 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         let buyAction = UIAlertAction(title: "Confirm", style: .default) {
             UIAlertAction in
 //            NSLog("Buying ticket...")
-            self.purchase()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) {
             UIAlertAction in
@@ -43,33 +54,31 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         // Present the controller
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    
-    @objc func purchase() {
-        print("buying ticket")
-        let alert = UIAlertController(title: "Order confirmed", message: "", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-        
-        //add party to an array and display info in ticket controller
-        //array purchases
-        
-        
-        
-    }
+
     
     
     @IBAction func saveAction(_ sender: Any) {
-        print("saving event")
+//        print("saving event...")
         
         let alert = UIAlertController(title: "Saved!", message: "", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
         //add to array saved and display on saved controller
-        
-        
-        
+//        saved.append()
+//        print("saving:\(saved)")
+        passDataToSavedVC()
+    }
+    
+    var saved = [String]()
+    
+    func passDataToSavedVC() {
+        let allViewControllers = tabBarController?.viewControllers ?? []
+        for vc in allViewControllers {
+            if let vc = vc as? UINavigationController, let savedVC = vc.viewControllers.first as? SavedViewController {
+                savedVC.saved = self.saved
+            }
+        }
     }
     
     
@@ -80,12 +89,7 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         view.backgroundColor =  UIColor(red: 0.9804, green: 0.9882, blue: 0.8902, alpha: 1.0)
         title = "Parties"
         
-//        card.layer.cornerRadius = 10
-//        card.layer.shadowColor = UIColor.gray.cgColor
-//        card.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-//        card.layer.shadowRadius = 4.0
-//        card.layer.shadowOpacity = 0.5
-//
+        createParties()
     }
     
     
