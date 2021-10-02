@@ -76,7 +76,7 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.50294744968414307" green="0.5241512656211853" blue="0.089663393795490265" alpha="0.31500931291390727" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.92230218648910522" green="0.93251895904541016" blue="0.70960003137588501" alpha="0.30189362582781459" colorSpace="custom" customColorSpace="sRGB"/>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="350" height="219"/>
                                         <connections>
@@ -212,6 +212,7 @@
                         <outlet property="label" destination="gKx-A0-2Ni" id="Ms4-Q0-Q16"/>
                         <outlet property="location" destination="UdV-o1-zDO" id="NbQ-qY-w53"/>
                         <outlet property="price" destination="xAm-As-rZK" id="uQR-vY-mKg"/>
+                        <outlet property="selectTicket" destination="HQn-je-N9s" id="VY2-Tu-tcU"/>
                         <outlet property="ticketsPurchased" destination="XWa-Wg-BGV" id="gsi-Qa-pvj"/>
                         <outlet property="ticketsQ" destination="1ud-sG-IZy" id="WY2-6b-HxW"/>
                     </connections>

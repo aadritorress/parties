@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var ticketsQ: UILabel!
     @IBOutlet weak var ticketsPurchased: UILabel!
+    @IBOutlet weak var selectTicket: UILabel!
     
     var purchases = [String]()
 
@@ -56,6 +57,7 @@ class DetailViewController: UIViewController {
         
         
         ticketsPurchased.text = "You have \(String(describing: ticketsQ.text!)) tickets to this party"
+        selectTicket.text = "Buy more tickets"
         
         //add party to an array and display info in ticket controller
         //array purchases

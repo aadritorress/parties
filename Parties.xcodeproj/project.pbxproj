@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8772A681270522B90095A4C2 /* Tickets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8772A680270522B90095A4C2 /* Tickets.storyboard */; };
+		8772A68427052B130095A4C2 /* TicketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8772A68227052B130095A4C2 /* TicketsTableViewCell.swift */; };
 		8780B43126FBE6F200793FEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B43026FBE6F200793FEA /* AppDelegate.swift */; };
 		8780B43326FBE6F200793FEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B43226FBE6F200793FEA /* SceneDelegate.swift */; };
 		8780B43526FBE6F200793FEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B43426FBE6F200793FEA /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8772A680270522B90095A4C2 /* Tickets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tickets.storyboard; sourceTree = "<group>"; };
+		8772A68227052B130095A4C2 /* TicketsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsTableViewCell.swift; sourceTree = "<group>"; };
 		8780B42D26FBE6F200793FEA /* Parties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parties.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8780B43026FBE6F200793FEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8780B43226FBE6F200793FEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				879839D7270373680034211F /* TicketsViewController.swift */,
+				8772A68227052B130095A4C2 /* TicketsTableViewCell.swift */,
+				8772A680270522B90095A4C2 /* Tickets.storyboard */,
 			);
 			path = Tickets;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8772A681270522B90095A4C2 /* Tickets.storyboard in Resources */,
 				8780B43D26FBE6F300793FEA /* LaunchScreen.storyboard in Resources */,
 				8780B45926FCDA9800793FEA /* Parties.storyboard in Resources */,
 				8780B43A26FBE6F300793FEA /* Assets.xcassets in Resources */,
@@ -210,6 +217,7 @@
 				8780B44926FBE89A00793FEA /* PartiesCollectionViewCell.swift in Sources */,
 				8780B43126FBE6F200793FEA /* AppDelegate.swift in Sources */,
 				8780B43326FBE6F200793FEA /* SceneDelegate.swift in Sources */,
+				8772A68427052B130095A4C2 /* TicketsTableViewCell.swift in Sources */,
 				879839DB27037FFA0034211F /* SavedViewController.swift in Sources */,
 				879839D5270364800034211F /* DetailViewController.swift in Sources */,
 			);
