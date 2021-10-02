@@ -30,9 +30,9 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ticketcell", for: indexPath) as! TicketsTableViewCell
         
-        cell.party.text = ""
-        cell.tickets.text = ""
-        cell.totalPrice.text = ""
+        cell.party.text = "party goes here"
+        cell.tickets.text = "tickets goes here"
+        cell.totalPrice.text = "price goes here"
         
         return cell
     }
