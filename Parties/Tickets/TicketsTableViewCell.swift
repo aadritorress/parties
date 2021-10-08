@@ -12,6 +12,7 @@ class TicketsTableViewCell: UITableViewCell {
     @IBOutlet weak var party: UILabel!
     @IBOutlet weak var tickets: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
+    @IBOutlet weak var imageParty: UIImageView!
     
 
 }

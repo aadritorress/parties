@@ -96,9 +96,11 @@ class ViewController: UIViewController {
         
         let partyStoryboard = UIStoryboard(name: "Parties", bundle: nil)
         let partyViewController = partyStoryboard.instantiateViewController(identifier: "PartiesViewController")
+        let ticketsStoryboard = UIStoryboard(name: "Tickets", bundle: nil)
+        let ticketsViewController = ticketsStoryboard.instantiateViewController(identifier: "TicketsViewController")
         
         let vc1 = UINavigationController(rootViewController: partyViewController)
-        let vc2 = UINavigationController(rootViewController: TicketsViewController())
+        let vc2 = UINavigationController(rootViewController: ticketsViewController)
         let vc3 = UINavigationController(rootViewController: AccountViewController())
         let vc4 = UINavigationController(rootViewController: SavedViewController())
         let vc5 = UINavigationController(rootViewController: HostViewController())

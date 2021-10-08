@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var ticketsPurchased: UILabel!
     @IBOutlet weak var selectTicket: UILabel!
     
-    var purchases = [String]()
+    var purchases = [PurchaseModel]()
 
     @IBAction func stepper(_ sender: UIStepper) {
         ticketsQ.text = String(Int(sender.value))
@@ -62,9 +62,9 @@ class DetailViewController: UIViewController {
         //add party to an array and display info in ticket controller
         //array purchases
     
-        purchases.append(label.text ?? "")
-        purchases.append(ticketsQ.text ?? "")
-        print(purchases)
+        purchases.append(PurchaseModel(party: PartyModel(title: label.text!, image: image.image!, shortDescription: details.text!, price: price.text!, longDescription: details.text!, location: location.text!), ticketsQ: ticketsQ.text!))
+//        purchases.append(ticketsQ.text ?? "")
+//        print(purchases)
         passDataToTicketVC()
         ticketsQ.text = "1"
     }
@@ -83,6 +83,7 @@ class DetailViewController: UIViewController {
     var longDescription = ""
     var cost = ""
     var area = ""
+    var partyImage: UIImage? 
     
     
     override func viewDidLoad() {

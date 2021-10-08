@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87618D45270CDAF2003C008C /* PurchaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87618D44270CDAF2003C008C /* PurchaseModel.swift */; };
 		8772A681270522B90095A4C2 /* Tickets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8772A680270522B90095A4C2 /* Tickets.storyboard */; };
 		8772A68427052B130095A4C2 /* TicketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8772A68227052B130095A4C2 /* TicketsTableViewCell.swift */; };
 		8780B43126FBE6F200793FEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B43026FBE6F200793FEA /* AppDelegate.swift */; };
@@ -20,12 +21,14 @@
 		8780B45126FC1D9700793FEA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B45026FC1D9700793FEA /* AccountViewController.swift */; };
 		8780B45926FCDA9800793FEA /* Parties.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8780B45826FCDA9800793FEA /* Parties.storyboard */; };
 		8780B45C26FD31C500793FEA /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780B45B26FD31C500793FEA /* HostViewController.swift */; };
+		878F50F0270F955300BB86BE /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F50EF270F955300BB86BE /* CodeViewController.swift */; };
 		879839D5270364800034211F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879839D4270364800034211F /* DetailViewController.swift */; };
 		879839D8270373680034211F /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879839D7270373680034211F /* TicketsViewController.swift */; };
 		879839DB27037FFA0034211F /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879839DA27037FFA0034211F /* SavedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87618D44270CDAF2003C008C /* PurchaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseModel.swift; sourceTree = "<group>"; };
 		8772A680270522B90095A4C2 /* Tickets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tickets.storyboard; sourceTree = "<group>"; };
 		8772A68227052B130095A4C2 /* TicketsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsTableViewCell.swift; sourceTree = "<group>"; };
 		8780B42D26FBE6F200793FEA /* Parties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parties.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +44,7 @@
 		8780B45026FC1D9700793FEA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		8780B45826FCDA9800793FEA /* Parties.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parties.storyboard; sourceTree = "<group>"; };
 		8780B45B26FD31C500793FEA /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
+		878F50EF270F955300BB86BE /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		879839D4270364800034211F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		879839D7270373680034211F /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		879839DA27037FFA0034211F /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
@@ -123,8 +127,10 @@
 			isa = PBXGroup;
 			children = (
 				879839D7270373680034211F /* TicketsViewController.swift */,
+				87618D44270CDAF2003C008C /* PurchaseModel.swift */,
 				8772A68227052B130095A4C2 /* TicketsTableViewCell.swift */,
 				8772A680270522B90095A4C2 /* Tickets.storyboard */,
+				878F50EF270F955300BB86BE /* CodeViewController.swift */,
 			);
 			path = Tickets;
 			sourceTree = "<group>";
@@ -217,8 +223,10 @@
 				8780B44926FBE89A00793FEA /* PartiesCollectionViewCell.swift in Sources */,
 				8780B43126FBE6F200793FEA /* AppDelegate.swift in Sources */,
 				8780B43326FBE6F200793FEA /* SceneDelegate.swift in Sources */,
+				878F50F0270F955300BB86BE /* CodeViewController.swift in Sources */,
 				8772A68427052B130095A4C2 /* TicketsTableViewCell.swift in Sources */,
 				879839DB27037FFA0034211F /* SavedViewController.swift in Sources */,
+				87618D45270CDAF2003C008C /* PurchaseModel.swift in Sources */,
 				879839D5270364800034211F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

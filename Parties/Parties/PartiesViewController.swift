@@ -20,10 +20,10 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
 
     let titles = ["Boat Party", "Camping Party", "House Party", "Pool Party"]
     let image = [UIImage(named: "Boat Party"), UIImage(named: "Camping Party"), UIImage(named: "House Party"), UIImage(named: "Pool Party")]
-    let shortDescription = ["something about the party", "something about the party", "something about the party", "something about the party"]
-    let price = ["price", "price", "price", "price"]
-    let longDescription = ["more about the party here", "more about the party here", "more about the party here", "more about the party here"]
-    let location = ["location", "location", "location", "location"]
+    let shortDescription = ["Party on a yacht down the Delaware River with a three hour open bar, a dinner buffet, and a live DJ all included with your ticket.", "We'll go canoeing, hang out at the waterfall, and make s'mores around the campfire. This is THEE event of the summer you don't want to miss!", "Slide through, bring your friends, make new ones, sing along, and we'll see you on the dance floor!", "The weather is warm now that summer is here, We're celebrating at Taylor's house with good food & some beer."]
+    let price = ["40", "25", "22", "15"]
+    let longDescription = ["more about the party here", "Bring a swimsuit for the lake party with sounds provided by top DJs. Sign up for the kickball game and feed your competitive spirit. Relax under your tent while our chef manages the grill. The drinks are on us!", "An energetic fun night of dancing to tunes that range from Harry Styles to Lizzo to ABBA and so many more favorites!", "more about the party here"]
+    let location = ["Philadelphia, PA", "Austin, TX", "San Francisco, CA", "Washington, D.C."]
 
     var parties: [PartyModel] = []
     
@@ -34,30 +34,7 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         }
     }
     
-    @IBAction func buyAction(_ sender: Any) {
-        // Create the alert controller
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-    
-        
-        // Create the actions
-        let buyAction = UIAlertAction(title: "Confirm", style: .default) {
-            UIAlertAction in
-//            NSLog("Buying ticket...")
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) {
-            UIAlertAction in
-            NSLog("Cancel")
-        }
 
-        // Add the actions
-        alertController.addAction(buyAction)
-        alertController.addAction(cancelAction)
-
-        // Present the controller
-        self.present(alertController, animated: true, completion: nil)
-    }
-
-    
     
     @IBAction func saveAction(_ sender: Any) {
 //        print("saving event...")
@@ -107,6 +84,7 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.title.text = titles[indexPath.row]
         cell.image.image = image[indexPath.row]
         cell.about.text = shortDescription[indexPath.row]
+        cell.location.text = location[indexPath.row]
         
         return cell
     }
@@ -118,6 +96,7 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         details?.longDescription =  longDescription[indexPath.row]
         details?.cost = price[indexPath.row]
         details?.area = location[indexPath.row]
+        details?.partyImage = image[indexPath.row]
         
         self.navigationController?.pushViewController(details!, animated: true)
     }
