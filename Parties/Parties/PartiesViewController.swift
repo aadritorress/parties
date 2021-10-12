@@ -42,24 +42,7 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         let alert = UIAlertController(title: "Saved!", message: "", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-        
-        //add to array saved and display on saved controller
-//        saved.append(parties.title)
-        print("saving from partiesVC:\(saved)")
-        passDataToSavedVC()
     }
-    
-    var saved = [String]()
-    
-    func passDataToSavedVC() {
-        let allViewControllers = tabBarController?.viewControllers ?? []
-        for vc in allViewControllers {
-            if let vc = vc as? UINavigationController, let savedVC = vc.viewControllers.first as? SavedViewController {
-                savedVC.saved = self.saved
-            }
-        }
-    }
-    
     
     @IBOutlet weak var collectionView: UICollectionView!    
     
@@ -85,6 +68,7 @@ class PartiesViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.image.image = image[indexPath.row]
         cell.about.text = shortDescription[indexPath.row]
         cell.location.text = location[indexPath.row]
+//        cell.saved = 
         
         return cell
     }

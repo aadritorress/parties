@@ -3,4 +3,99 @@
    uuid = "91246335-E5EE-4CAB-83D2-BBE04FD0EA5F"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87698CE5-1017-4B30-A8D9-B703D9382234"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Parties/Saved/SavedTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - 914c9cbdb8e9bf69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parties.SavedTableViewCell.__allocating_init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Parties.SavedTableViewCell"
+                  moduleName = "Parties"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adritorres/Desktop/iOS%20Apps/Parties/Parties/Saved/SavedTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - 1f9dbce32b8539e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parties.SavedTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Parties.SavedTableViewCell"
+                  moduleName = "Parties"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adritorres/Desktop/iOS%20Apps/Parties/Parties/Saved/SavedTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - 971371e7a2c49745"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parties.SavedTableViewCell.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Parties.SavedTableViewCell&gt;"
+                  moduleName = "Parties"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adritorres/Desktop/iOS%20Apps/Parties/Parties/Saved/SavedTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - 511466fcb423fbc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parties.SavedTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Parties.SavedTableViewCell&gt;"
+                  moduleName = "Parties"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adritorres/Desktop/iOS%20Apps/Parties/Parties/Saved/SavedTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - d6ee7b734e0c928b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parties.SavedTableViewCell.__deallocating_deinit"
+                  moduleName = "Parties"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adritorres/Desktop/iOS%20Apps/Parties/Parties/Saved/SavedTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

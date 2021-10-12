@@ -55,7 +55,6 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let code = UIStoryboard(name: <#T##String#>, bundle: <#T##Bundle?#>)
         let code = storyboard?.instantiateViewController(identifier: "qr-code") as? CodeViewController
         code?.modalPresentationStyle = .popover
         present(code!, animated: true, completion: nil)
