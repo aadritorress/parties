@@ -35,7 +35,7 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - 1f9dbce32b8539e"
+                  uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - 1f9dbce32b8535c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,9 +45,9 @@
                   urlString = "file:///Users/adritorres/Desktop/iOS%20Apps/Parties/Parties/Saved/SavedTableViewCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "10"
-                  endingLineNumber = "10"
-                  offsetFromSymbolStart = "264">
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "112">
                </Location>
                <Location
                   uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - 971371e7a2c49745"
@@ -65,7 +65,7 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - 511466fcb423fbc1"
+                  uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - 511466fcb423fb03"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -75,9 +75,9 @@
                   urlString = "file:///Users/adritorres/Desktop/iOS%20Apps/Parties/Parties/Saved/SavedTableViewCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "10"
-                  endingLineNumber = "10"
-                  offsetFromSymbolStart = "180">
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "88">
                </Location>
                <Location
                   uuid = "87698CE5-1017-4B30-A8D9-B703D9382234 - d6ee7b734e0c928b"

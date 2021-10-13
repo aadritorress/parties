@@ -9,4 +9,9 @@ import UIKit
 
 class SavedTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var savedImage: UIImageView!
+    @IBOutlet weak var savedTitle: UILabel!
+    @IBOutlet weak var savedLocation: UILabel!
+    @IBOutlet weak var buyTicketsButton: UIButton!
+    
 }

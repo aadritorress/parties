@@ -131,9 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				879839D7270373680034211F /* TicketsViewController.swift */,
-				87618D44270CDAF2003C008C /* PurchaseModel.swift */,
 				8772A68227052B130095A4C2 /* TicketsTableViewCell.swift */,
 				8772A680270522B90095A4C2 /* Tickets.storyboard */,
+				87618D44270CDAF2003C008C /* PurchaseModel.swift */,
 				878F50EF270F955300BB86BE /* CodeViewController.swift */,
 			);
 			path = Tickets;
